@@ -1,0 +1,139 @@
+.menu-ppl.verMenu {
+	left: 0;
+}
+.menu-ppl{
+	position: fixed;
+	background-color: @primario;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: -110vw;
+	bottom: 0;
+	z-index: 10;
+	transition: left 0.4s;
+	ul {
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		list-style: none;
+		min-width: 300px;
+		li {
+			display: block;
+			width: 100%;
+			margin: 5px auto;
+			a{
+				background-color: darken(@primario, 10);
+				display: block;
+				position: relative;
+				padding: 10px 30px;
+				border-radius: 4px;
+				.font-size(1.1);
+				font-family: @fuenteComun;
+				color: @bg-claro;
+				outline: none;
+				text-align: center;
+				font-weight: 600;
+				transition: all 0.2s;
+				box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.5);
+				&:hover {
+					transform: scale(1.1);
+				}
+				&:active {
+					transform: scale(0.98);	
+				}
+			}
+		}
+	}
+
+	// Submenu +++++++++++++++++++++++++++++++++++
+	li.menu-item-has-children {
+		position: relative;
+		> ul{
+			position: absolute;
+			padding: 0;
+			right: -5000px;
+			top: -1px;
+			list-style: none;
+			background-color: @primario;
+			opacity: 0;
+			z-index: 100000;
+			.transition(right, 0, linear, 0.6, opacity, 0.3, linear, 0.3);
+		}
+		&:hover > ul{
+			opacity: 1;
+			z-index: 100001;
+			.transition(right, 0, linear, 0, opacity, 0.2, linear, 0);
+		}
+		li:hover > a, li a:focus{
+			background-color: darken(@primario, 10);
+		}
+	}
+	> ul{
+		> li.menu-item-has-children{
+			> ul{
+				top: 100%;
+				.translate-x(50%);
+			}
+			&:hover > ul{
+				right: 50%;
+			}
+			li.menu-item-has-children:hover > ul{
+				right: 100%;
+			}
+		}
+		ul a{
+			display: block;
+			padding: 10px 20px;
+			min-width: 100px;
+			text-align: center;
+			white-space: nowrap;
+			color: @textoClaro;
+			.font-size(1);
+			.transition(all, 0.2, ease-out);
+		}
+	} 
+}
+
+
+
+
+#btn_menu{
+	display: block;
+	width: 42px;
+	height: 42px;
+	.border-radius(2px);
+	overflow: hidden;
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	z-index: 10;
+	span {
+		background-color: @bg-claro;
+		width: 75%;
+		height: 4px;
+		display: block;
+		margin: 6.5px auto;
+		.border-radius(2px);
+		.transition(all, 0.2, ease-out);
+	}
+}
+#menu_chk:checked + label #btn_menu, #btn_menu.btn_activo{
+	span:first-child {
+		.translate-y(-50px);
+	}
+	span:last-child {
+		.transform(rotate(45deg));
+	}
+	span {
+		margin: 0;
+		position: absolute;
+		top: 45%;
+		left: 13%;
+		.transform(rotate(-45deg));
+	}
+}
+

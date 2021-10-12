@@ -1,0 +1,161 @@
+header .ancho {
+    position: relative;
+}
+	.logo {
+		width: 250px;
+		max-width: 60%;
+	}
+    
+	// Texto slider
+	.contenedor-slide .metaslider .caption-wrap{
+		bottom: 5px;
+		width: 90%;
+		left: 5%;
+		text-align: center;
+		background: none;
+		color: @textoClaro;
+		.font-size(1);
+		p{
+			margin-top: 3px !important;
+			margin-bottom: 3px !important;
+	  	}
+		.caption {
+			p{
+				margin-top: 5px !important;
+				margin-bottom: 5px !important;
+		  	}
+		}
+	}
+
+	.nivo-controlNav {
+	  	transform: translateY(5%);
+	  	.nivo-control {
+	  		width: 8px !important;
+	  		height: 8px !important;
+	  		border: 2px @primario solid !important;
+	  	}
+	}
+	.nivo-caption {
+		bottom: 5px !important;
+		width: 90% !important;
+	 	left: 5% !important; //<<---- orientacion del texto
+		.font-size(1) !important;
+		text-align: center;
+	}
+
+	// testimoniales
+	.intestimonial {
+		width: 80%;
+	}
+
+	.foot-wg > div {
+		width: 50%;
+		text-align: center;
+		&:last-child {
+			width: 100%;
+		}
+	}
+		.menu-redes-container ul {
+			display: inline-block;
+			text-align: left;
+		}
+		.foot-wg > div {
+			> h3::after {
+				margin-left: auto;
+				margin-right: auto;
+			}
+			> div {
+				display: inline-block;
+				text-align: left;
+			}
+		}
+
+	//Contacto
+	.contenido .datos-cont li {
+		width: 100%;
+	}
+
+	//category post
+	.category-post {
+		.my-column(8, 20px);
+  	}
+	//Servicios
+	.servicios {
+		.wg-servicio {
+			width: 50%;
+		}
+	}
+		.servicios .wg-servicio .textwidget a{
+			img {
+				width: 120px;
+			}
+		}
+
+	.alignleft, a .alignleft, .alignright, a .alignright {
+		float: none;
+		display: block;
+		margin: 0 auto 20px;
+		max-width: 80%;
+	}
+
+
+	.btn-wapp {
+		right: 5px;
+		bottom: 0;
+	}
+	#ir-arriba {
+		right: 5px;
+		bottom: 70px;
+	}
+
+	// -- <<Team>> -- //
+	.team {
+		div {
+			.my-column(6, 10px);
+			max-width: 300px;
+			text-align: center;
+		}
+	}
+
+	// Acredita
+	div.grupo {
+		display: block;
+		span {
+			display: block;
+			vertical-align: middle;
+			margin: 10px;
+			.font-size(1.3);
+			font-weight: 600;
+		}
+		img {
+			max-width: 50%;
+		}
+	}
+
+	// Huella
+	.cfc_form {
+		.my-column(12);
+	}
+	.cfc_results {
+		.my-column(7);
+		vertical-align: middle;
+		> div {
+			padding: 15px;
+			min-height: auto;
+		}
+	}
+	.cfc_termometer {
+		.my-column(5);
+		text-align: center;
+		vertical-align: middle;
+		> div {
+			
+		}
+	}
+
+
+
+	// // slider
+	// .metaslider .flexslider .slides > li{
+	// 	margin: 0 !important;
+	// }

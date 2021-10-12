@@ -1,0 +1,83 @@
+// Variables y Reset
+@import "base.less";
+
+// mixins
+@import "mixins.less";
+
+// Tipografia
+@import "tipografia.less";
+
+// Layout
+@import "layout.less";
+
+// Menu
+@import "menu.less";
+
+
+// Break point 1
+@media screen and (max-width: @bp1) {
+	@import "bp1.less";
+}
+
+// Break point 2
+@media screen and (max-width: @bp2) {
+	@import "bp2.less";
+}
+
+// Break point especial
+@media screen and (max-width: 550px) {
+	// Novedades
+	.post-content {
+		width: 100%;
+	}
+}
+
+// **********************************
+// RESPONSIVE DEL PARALAX
+// **********************************
+// Break point especial
+@media screen and (max-width: 1070px) {.paralax {height: 60vh;}}
+// Break point especial
+@media screen and (max-width: 955px) {.paralax {height: 55vh;}}
+// Break point especial
+@media screen and (max-width: 910px) {.paralax {height: 50vh;}}
+// Break point especial
+@media screen and (max-width: 870px) {.paralax {height: 45vh;}}
+// Break point especial
+@media screen and (max-width: 820px) {.paralax {height: 40vh;}}
+// Break point especial
+@media screen and (max-width: 780px) {.paralax {height: 35vh;}}
+// // Break point especial
+@media screen and (max-width: 650px) {.paralax {.texto-paralax{ margin-top: 10px !important; .texto{ margin-top: 0 !important; } }}}
+// // Break point especial
+@media screen and (max-width: 500px) {.paralax {height: 30vh;}}
+// // Break point especial
+@media screen and (max-width: 430px) {.paralax {height: 28vh;}}
+// // Break point especial
+@media screen and (max-width: 400px) {.paralax {height: 25vh;}}
+
+// **************************************
+// RESPONSIVE DEL TEXTO DEL SLIDE
+// **************************************
+// // Break point especial
+@media screen and (max-width: 475px) {
+	// Texto slider
+	.contenedor-slide .metaslider .caption-wrap{
+		.font-size(0.8);
+		h1{.font-size(1) !important;}
+		.caption {
+			h1{.font-size(1) !important;}
+		}
+	}
+	.nivo-caption {
+		.font-size(0.8) !important;;
+		h1{.font-size(1) !important;}
+	}
+}
+
+
+
+// Break point 3
+@media screen and (max-width: @bp3) {
+	@import "bp3.less";
+}
